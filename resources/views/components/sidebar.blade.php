@@ -61,6 +61,22 @@
                         <span>
                             <i class="ti ti-layout-dashboard"></i>
                         </span>
+                        <span class="hide-menu">Data Keuangan</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="#" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-layout-dashboard"></i>
+                        </span>
+                        <span class="hide-menu">Data Hafalan</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="#" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-layout-dashboard"></i>
+                        </span>
                         <span class="hide-menu">Data Kesehatan</span>
                     </a>
                 </li>
