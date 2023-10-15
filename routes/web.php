@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::resource('/santri', SantriController::class);
+Route::resource('/payments', PaymentController::class);

@@ -1,9 +1,9 @@
-<aside class="left-sidebar">
+<aside class="left-sidebar" style="background-color:purple !important; color:white !important;">
     <!-- Sidebar scroll-->
     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
             <a href="{{ url('/')}}" class="text-nowrap logo-img">
-                <h1>SIMPAK</h1>
+                <h1>LOGO SIAKAD</h1>
             </a>
             <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                 <i class="ti ti-x fs-8"></i>
