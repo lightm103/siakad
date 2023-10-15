@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard</title>
-    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/favicon.png')}}" />
+    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/favicon.png') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}" />
 </head>
 
@@ -21,8 +21,9 @@
             <!--  Header Start -->
             @include('components.navbar')
             <!--  Header End -->
-            @yield('content')
-
+            <div class="container-fluid">
+                @yield('content')
+            </div>
         </div>
     </div>
     <script src="{{ asset('assets/libs/jquery/dist/jquery.min.js') }}"></script>

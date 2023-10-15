@@ -2,42 +2,41 @@
 
 @section('content')
     <div class="container mt-5">
-        <a href="{{ route('santri.create') }}" class="btn btn-primary mb-5" data-bs-toggle="modal"
+        <a href="{{ route('santri.create') }}" class="btn btn-primary mb-5 text-sm-center" data-bs-toggle="modal"
             data-bs-target="#createSantriModal">Tambah Santri</a>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>PPS ID</th>
-                    <th>Nama Santri</th>
-                    <th>Kelas</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($santris as $santri)
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-dark">
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{ $santri->pps_id }}</td>
-                        <td>{{ $santri->nama_santri }}</td>
-                        <td>{{ $santri->kelas }}</td>
-                        <td>
-                            <a href="{{ route('santri.show', $santri) }}" class="btn btn-info">Show</a>
-                            <a href="{{ route('santri.edit', $santri) }}" class="btn btn-warning">Edit</a>
-                            <form action="{{ route('santri.destroy', $santri) }}" method="POST" class="d-inline-block">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
-                        </td>
+                        <th class="text-sm-center">No.</th>
+                        <th class="text-sm-center">ID PPS</th>
+                        <th class="text-sm-center">Nama Santri</th>
+                        <th class="text-sm-center">Kelas</th>
+                        <th class="text-sm-center">Aksi</th>
                     </tr>
-                @endforeach
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach ($santris as $santri)
+                        <tr>
+                            <td class="text-sm-center">{{ $loop->iteration }}</td>
+                            <td class="text-sm-center">{{ $santri->pps_id }}</td>
+                            <td class="text-sm-center">{{ $santri->nama_santri }}</td>
+                            <td class="text-sm-center">{{ $santri->kelas }}</td>
+                            <td class="text-sm-center">
+                                <a href="{{ route('santri.show', $santri) }}" class="btn btn-info btn-sm">Lihat</a>
+                                <form action="{{ route('santri.destroy', $santri) }}" method="POST" class="d-inline-block">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
 
-
-    <!-- Modal -->
     <!-- Modal -->
     <div class="modal fade" id="createSantriModal" tabindex="-1" aria-labelledby="createSantriModalLabel"
         aria-hidden="true">
@@ -45,7 +44,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="createSantriModalLabel">Tambah Santri Baru</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
                 </div>
                 <div class="modal-body">
                     <form action="{{ route('santri.store') }}" method="POST">
@@ -117,7 +116,7 @@
                             <input type="text" class="form-control" id="no_hp" name="no_hp">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </div>
                     </form>

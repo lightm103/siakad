@@ -26,4 +26,14 @@ class Santri extends Model
         'nama_wali',
         'no_hp'
     ];
+
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+
+    public function paymentTypes()
+    {
+        return $this->hasManyThrough(PaymentType::class, Payment::class);
+    }
 }
